@@ -1,0 +1,34 @@
+.customers-list{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    }
+    
+  .customers-item{
+   width: 170px;
+   height: 92px;
+  }
+  
+  
+  
+  .customers-link{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  justify-content: center;
+  border: 1px solid var(--soc-link-color);
+  border-radius: 4px;
+  color:var(--soc-link-color);
+  transition: color 250ms var(--cubic-bezier),
+      border 250ms var(--cubic-bezier);
+      &:hover,
+      &:focus{
+        color:var(--accent-color);
+        border-color: var(--accent-color);
+      }
+  }
+  .customers-icon{
+    fill:currentColor;
+  }
+ 
