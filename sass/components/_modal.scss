@@ -21,8 +21,6 @@
     top:50%;
     padding:40px;
     transform: translate(-50%, -50% ) scale(1);
-    min-width: 528px;
-    min-height: 581px;
     opacity: 1;
     background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -30,6 +28,15 @@
   transition: transform 250ms var(--cubic-bezier),
   opacity 250ms var(--cubic-bezier);
     
+  @include mobile { 
+    width: 450px; 
+    min-height: 609px; 
+  } 
+ 
+  @include desktop { 
+    width: 528px; 
+    min-height: 581px; 
+  }
   }
   .close-button{
     position: absolute;
@@ -153,14 +160,24 @@ transition: border-color 250ms var(--cubic-bezier);
 
 
 .checkbox-text{
-  font-size: 14px;
-    line-height: 1.7;
-    margin-right: 7px;
-    
+  @include font(null, 10px, 1.6); 
+  margin-right: 7px; 
+  @include mobile { 
+    @include font(null, 12px, 1.6); 
+  } 
+  @include desktop { 
+    @include font(null, 14px, 1.7); 
+  } 
 }
 .policy-link {
-  color: var(--accent-color);
-  font-size:14px;
+  @include font(null, 10px, 1.6); 
+  color: var(--accent-color); 
+  @include mobile { 
+    @include font(null, 12px, 1.6); 
+  } 
+  @include desktop { 
+    @include font(null, 14px, 1.7); 
+  }
 }
 .form-button{
   min-width: 200px;
